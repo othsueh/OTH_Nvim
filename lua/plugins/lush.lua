@@ -1,1 +1,1 @@
-return { { "rktjmp/lush.nvim" } }
+return { { "rktjmp/lush.nvim" }, { "../colorscheme/lua/lush_theme" } }
