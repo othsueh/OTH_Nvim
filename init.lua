@@ -1,7 +1,5 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-vim.cmd("colorscheme oth1")
-vim.opt.shell = "/usr/bin/zsh -i"
 require("copilot").setup({
   panel = {
     enabled = true,
@@ -45,22 +43,5 @@ require("copilot").setup({
   copilot_node_command = "node", -- Node.js version must be > 18.x
   server_opts_overrides = {},
 })
-require("lazy").setup({
-  {
-    "gptlang/CopilotChat.nvim",
-    branch = "canary",
-    opts = {},
-    build = function()
-      vim.defer_fn(function()
-        vim.cmd("UpdateRemotePlugins")
-        vim.notify("CopilotChat - Updated remote plugins. Please restart Neovim.")
-      end, 3000)
-    end,
-    event = "VeryLazy",
-    keys = {
-      { "<leader>cce", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
-      { "<leader>cct", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
-    },
-  },
-  ...,
-})
+vim.cmd("colorscheme tokyonight-moon")
+vim.opt.shell = "/usr/bin/zsh -i"
