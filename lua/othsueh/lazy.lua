@@ -12,6 +12,7 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.editor.aerial" },
+    { import = "lazyvim.plugins.extras.dap.core" },
     -- { import = "othsueh.plugins" },
     { import = "othsueh.plugins.extras" },
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
