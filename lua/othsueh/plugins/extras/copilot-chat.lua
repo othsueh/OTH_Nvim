@@ -1,6 +1,8 @@
 return {
   "gptlang/CopilotChat.nvim",
-  opts = {},
+  opts = {
+    mode = "split",
+  },
   branch = "main",
   config = function()
     vim.defer_fn(function()
