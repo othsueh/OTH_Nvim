@@ -1,0 +1,1 @@
+return { { "othsueh/friendly-snippets" } }

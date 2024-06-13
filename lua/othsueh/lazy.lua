@@ -13,8 +13,8 @@ require("lazy").setup({
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.editor.aerial" },
     { import = "lazyvim.plugins.extras.dap.core" },
-    -- { import = "othsueh.plugins" },
     { import = "othsueh.plugins.extras" },
+    -- { import = "othsueh.plugins" },
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
@@ -31,7 +31,13 @@ require("lazy").setup({
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
   install = { colorscheme = { "tokyonight", "habamax", "OTHColor" } },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  checker = {
+    enabled = false,
+    concurrency = 4,
+    notify = true,
+    frequency = 3600,
+    check_pinned = false,
+  }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
